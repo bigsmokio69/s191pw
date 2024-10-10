@@ -10,3 +10,4 @@ Route::view('/', 'inicio')->name('raiz'); //En este tipo de ruta view lo primero
 
 Route::view('/formulario', 'formulario')->name('rutacacas');
 Route::view('/consultar', 'clientes')->name('rutaclientes');
+Route::view('/component', 'componentes')->name('rutacomps');
