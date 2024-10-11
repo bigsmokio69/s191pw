@@ -1,3 +1,5 @@
-<div>
-    <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
-</div>
+<div class="container mt-4">
+    <div class="alert alert-{{$tipo}}" role="alert">
+        Soy un alert {{$slot}}
+    </div>
+</div> <!--div.container.mt-4 shortcut para hacer un div -->
