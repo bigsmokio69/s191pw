@@ -17,3 +17,5 @@ Route::get('/formulario', [controladorVistas::class, 'insert'])->name('rutacacas
 Route::get('/consultar', [controladorVistas::class, 'select'])->name('rutaclientes');
 
 Route::view('/component', 'componentes')->name('rutacomps');
+
+Route::post('/enviarCliente', [controladorVistas::class, 'procesarCliente'])->name('procCliente');

@@ -21,11 +21,10 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('rutacacas') }}">Formulario de
-                            registro</a>
+                        <a class="nav-link active {{ request()->routeIs('rutacacas')?"text-warning":"" }}" aria-current="page" href="{{ route('rutacacas') }}">Registro de clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rutaclientes') }}">Consultar Clientes</a>
+                        <a class="nav-link active {{ request()->routeIs('rutaclientes')?"text-info":"" }} " href="{{ route('rutaclientes') }}">Consultar Clientes</a>
 
                 </ul>
             </div>

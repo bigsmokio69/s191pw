@@ -17,5 +17,13 @@ class controladorVistas extends Controller
     public function select(){
         return view('clientes');
     }
+    public function procesarCliente(Request $peticion){
+        //repuesta a la peticion POST
+        //return $peticion->ip();
+        //return $peticion->path();
+        //return $peticion->url();
+        return $peticion->all();
+
+    }
 
 }
