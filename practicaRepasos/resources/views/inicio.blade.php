@@ -20,6 +20,9 @@
         <h2>Programación Web</h2>
         <h2>Jorge Emiliano Cortes Sánchez</h2>
         <h2>17 de Octubre de 2024</h2>
+
+        <a href="{{ route('repaso') }}" class="btn btn-outline-danger"> REPASO 1 </a>
+
         </div>
     </div>
 
