@@ -5,7 +5,23 @@
   @section('contenido') <!--Delimita nuestra seccion de contenido-->  
 
       <div class="container mt-5 col-md-6">
-        
+          @if (session('exito'))
+            <x-Alert tipo="success">{{session('exito')}}</x-Alert>
+          @endif
+
+          @session('exito')
+              <x-Alert tipo="danger">{{session('exito')}}</x-Alert>
+          @endsession
+
+          @session('exito')
+            <script>
+              Swal.fire({
+              title: "Respuesta del servidor!",
+              text: '{{$value}}',
+              icon: "success"
+              });
+            </script>
+          @endsession
         <div class="card font-monospace">
         
           <div class="card-header fs-5 text-center text-primary">
