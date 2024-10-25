@@ -34,19 +34,25 @@
               @csrf
                 <div class="mb-3">
                   <label for="txtnombre" class="form-label">Nombre: </label>
-                  <input type="text" class="form-control" name="txtnombre">
+                  <input type="text" class="form-control" name="txtnombre" value="{{old('txtnombre')}}">
+                  <small class="text-danger fst-italic"> {{$errors->first('txtnombre')}} </small>
                 </div>
                 <div class="mb-3">
                   <label for="txtapellido" class="form-label">Apellido: </label>
-                  <input type="text" class="form-control" name="txtxapellido">
+                  <input type="text" class="form-control" name="txtapellido" value="{{old('txtapellido')}}">
+                  <small class="text-danger fst-italic"> {{$errors->first('txtapellido')}} </small>
+
                 </div>
                 <div class="mb-3">
                   <label for="txtcorreo" class="form-label">Correo: </label>
-                  <input type="email" class="form-control" name="txtcorreo">
+                  <input type="text" class="form-control" name="txtcorreo" value="{{old('txtcorreo')}}">
+                  <small class="text-danger fst-italic"> {{$errors->first('txtcorreo')}} </small>
                 </div>
                 <div class="mb-3">
                   <label for="txttelefono" class="form-label">Telefono: </label>
-                  <input type="text" class="form-control" name="txttelefono">
+                  <input type="text" class="form-control" name="txttelefono" value="{{old('txttelefono')}}">
+                  <small class="text-danger fst-italic"> {{$errors->first('txttelefono')}} </small>
+
                 </div>
                 </div>
               <div class="card-footer text-muted">

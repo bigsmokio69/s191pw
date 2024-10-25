@@ -19,18 +19,17 @@ class controladorVistas extends Controller
     }
     public function procesarCliente(Request $peticion){
 
-        //return redirect('/');
-        //return redirect()->route('rutaclientes');
-        //return back(); //Hace una direccion hacia el punto anterior del form, en este caso el mismo form
-        /* 
-        $id=[['usuario'=>'1'], ['usuario'=>'2']];
-        return view('formulario', compact('id')); */
+        $validacion= $peticion->validate([
+            'txtnombre'=> 'required | min:3 | max:25 | alpha',
+            'txtapellido'=> 'required | min:3 | max:25 | alpha',
+            'txtcorreo'=> 'required | email:rfc,dns',
+            'txttelefono'=> 'required | numeric',
 
+        ]); //sirve para determinar las reglas de validacion
         $usuario=$peticion->input('txtnombre');
         session()->flash('exito', 'Se guardo el usuario: '.$usuario);
 
         return to_route('rutacacas');
-
     }
 
 }
