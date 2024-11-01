@@ -13,54 +13,54 @@
             });
         </script>
     @endsession
-    <h1>Registrar datos de un libro</h1>
+    <h1>{{__('Registrar datos de un libro')}}</h1>
     <hr>
     <div class="container">
         <form method="POST" action="/envlibro">
             @csrf
             <div class="mb-3">
-                <label for="isbn" class="form-label">ISBN</label>
+                <label for="isbn" class="form-label">{{__('ISBN')}}</label>
                 <input type="text" class="form-control" name="isbn" value="{{old('isbn')}}">
                 <small class="text-danger fst-italic"> {{$errors->first('isbn')}} </small>
             </div>
             <div class="mb-3">
-                <label for="titulo" class="form-label">Titulo</label>
+                <label for="titulo" class="form-label">{{__('Titulo')}}</label>
                 <input type="text" class="form-control" name="titulo" value="{{old('titulo')}}">
                 <small class="text-danger fst-italic"> {{$errors->first('titulo')}} </small>
 
             </div>
             <div class="mb-3">
-                <label for="autor" class="form-label">Autor</label>
+                <label for="autor" class="form-label">{{__('Autor')}}</label>
                 <input type="text" class="form-control" name="autor" value="{{old('autor')}}">
                 <small class="text-danger fst-italic"> {{$errors->first('autor')}} </small>
 
             </div>
             <div class="mb-3">
-                <label for="pags" class="form-label">Páginas</label>
+                <label for="pags" class="form-label">{{__('Páginas')}}</label>
                 <input type="text" class="form-control" name="pags" value="{{old('pags')}}">
                 <small class="text-danger fst-italic"> {{$errors->first('pags')}} </small>
 
             </div>
             <div class="mb-3">
-                <label for="year" class="form-label">Año</label>
+                <label for="year" class="form-label">{{__('Año')}}</label>
                 <input type="text" class="form-control" name="year" value="{{old('year')}}">
                 <small class="text-danger fst-italic"> {{$errors->first('year')}} </small>
 
             </div>
             <div class="mb-3">
-                <label for="editorial" class="form-label">Editorial</label>
+                <label for="editorial" class="form-label">{{__('Editorial')}}</label>
                 <input type="text" class="form-control" name="editorial" value="{{old('editorial')}}">
                 <small class="text-danger fst-italic"> {{$errors->first('editorial')}} </small>
 
             </div>
             <div class="mb-3">
-                <label for="mailEdit" class="form-label">Email de la editorial</label>
+                <label for="mailEdit" class="form-label">{{__('Email de la editorial')}}</label>
                 <input type="text" class="form-control" name="mailEdit" value="{{old('mailEdit')}}">
                 <small class="text-danger fst-italic"> {{$errors->first('mailEdit')}} </small>
 
             </div>
 
-            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+            <button type="submit" class="btn btn-primary mb-3">{{__('Registrar')}}</button>
         </form>
     </div>
 </div>
