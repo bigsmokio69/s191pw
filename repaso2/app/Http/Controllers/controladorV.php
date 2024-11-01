@@ -17,6 +17,7 @@ class controladorV extends Controller
 
     public function regLibro(validarLibro $peti){
         $titulo=$peti->input('titulo');
-        return "El libro que guardaste es ". $titulo;
+        session()->flash('guardado', 'Todo correcto: Libro '.$titulo . ' guardado');
+        return to_route('rutalibro');
     }
 }

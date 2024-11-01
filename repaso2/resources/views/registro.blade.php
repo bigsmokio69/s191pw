@@ -4,6 +4,15 @@
 @section('cuerpo')
 
 <div class="container-md text-center col-md-4 border mb-3 mt-3">
+    @session('guardado')
+        <script>
+            Swal.fire({
+                title: "Aviso de registro!",
+                text: '{{$value}}',
+                icon: "success"
+            });
+        </script>
+    @endsession
     <h1>Registrar datos de un libro</h1>
     <hr>
     <div class="container">
