@@ -1,0 +1,15 @@
+.titNot{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.tit2Not{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(233, 82, 82);
+    font-weight: bold;
+}
+
+.txtNot{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    margin-top: 0.75rem;
+}

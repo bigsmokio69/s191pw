@@ -4,7 +4,7 @@
 
   @section('contenido') <!--Delimita nuestra seccion de contenido-->  
 
-      <div class="container mt-5 col-md-6">
+      <div class="container mt-5 col-md-6 border">
           @if (session('exito'))
             <x-Alert tipo="success">{{session('exito')}}</x-Alert>
           @endif
@@ -61,7 +61,7 @@
                 <button type="submit" class="btn btn-primary success btn sm"> {{__('Guardar Cliente')}} </button>
               </div>
             </form>
-        </div>
+          </div>
       </div>
     </div>
   @endsection
