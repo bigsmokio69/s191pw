@@ -1,9 +1,7 @@
 <?php
 
+use App\Http\Controllers\controladorV;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('principal');
-});
-
-Route::view('/libro', 'registro')->name('rutaLibro');
+Route::get('/', [controladorV::class, 'principal'])->name('raiz');
+Route::get('/libro', [controladorV::class, 'registro'])->name('rutalibro');

@@ -14,7 +14,7 @@
     <!---INICIO de la NAVBAR-->
     <nav class="navbar navbar-expand-lg" style="background-color: #AB886D;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color: #ffffff;">Principal</a>
+            <a class="navbar-brand" href="{{ route('raiz') }}" style="color: #ffffff;">Principal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color: #ffffff;">Registro de libro</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('rutalibro') }}" style="color: #ffffff;">Registro de libro</a>
                     </li>
                 </ul>
             </div>
