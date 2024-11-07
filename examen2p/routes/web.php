@@ -1,9 +1,7 @@
 <?php
 
+use App\Http\Controllers\control;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('utiles_escolares');
-});
-
-Route::post('/enviar', [controladorex::class, ]);
+Route::get('/', [control::class, 'inicio'])->name('raiz');
+Route::post('/enviar', [control::class, 'mostrar'])->name('nombreruta');
