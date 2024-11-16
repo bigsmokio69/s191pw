@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\clienteController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\controladorVistas;
 
 /* Route::get('/', function () {
     return view('welcome');
@@ -13,14 +12,12 @@ use App\Http\Controllers\controladorVistas;
 Route::view('/formulario', 'formulario')->name('rutacacas');
 Route::view('/consultar', 'clientes')->name('rutaclientes'); */
 
-Route::get('/', [controladorVistas::class,'home'])->name('raiz');
-Route::get('/consultar', [controladorVistas::class, 'select'])->name('rutaclientes');
-
-Route::view('/component', 'componentes')->name('rutacomps');
-
-Route::post('/enviarCliente', [controladorVistas::class, 'procesarCliente'])->name('procCliente');
-
 
 //rutas para trabajar con clienteController
 //Laravel pide que estructuremos el nombre de nuestras rutas de la siguiente manera
 Route::get('/cliente/create', [clienteController::class, 'create'])->name('rutacacas');
+Route::post('/cliente', [clienteController::class, 'store'])->name('procCliente');
+
+//Antiguas rutas que estaban en el controlador de vistas
+Route::get('/', [clienteController::class,'home'])->name('raiz');
+Route::get('/cliente', [clienteController::class, 'index'])->name('rutaclientes');
