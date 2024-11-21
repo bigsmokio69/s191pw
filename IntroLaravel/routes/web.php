@@ -21,3 +21,10 @@ Route::post('/cliente', [clienteController::class, 'store'])->name('procCliente'
 //Antiguas rutas que estaban en el controlador de vistas
 Route::get('/', [clienteController::class,'home'])->name('raiz');
 Route::get('/cliente', [clienteController::class, 'index'])->name('rutaclientes');
+
+//Rutas para actualizar clientes
+Route::get('/cliente/editar/{id}', [clienteController::class, 'edit'])->name('EditarCliente');
+Route::put('/cliente/update/{id}', [clienteController::class, 'update'])->name('UpdateCliente');
+
+//Rutas para eliminar clientes
+Route::delete('/cliente/delete/{id}', [clienteController::class, 'destroy'])->name('deleteClientes');
