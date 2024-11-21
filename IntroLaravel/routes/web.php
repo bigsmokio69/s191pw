@@ -27,4 +27,4 @@ Route::get('/cliente/editar/{id}', [clienteController::class, 'edit'])->name('Ed
 Route::put('/cliente/update/{id}', [clienteController::class, 'update'])->name('UpdateCliente');
 
 //Rutas para eliminar clientes
-Route::delete('/cliente/delete/{id}', [clienteController::class, 'destroy'])->name('deleteClientes');
+Route::delete('/cliente/delete/{id}', [clienteController::class, 'destroy'])->name('deleteCliente');

@@ -81,7 +81,7 @@ class clienteController extends Controller
             "updated_at"=>Carbon::now()
         ]);
         
-        session()->flash('actualizado', 'Se actualizo con exito el usuario');
+        session()->flash('actualizado', 'Se actualizo con exito el usuario '. $request->input('txtnombre'));
         return to_route('rutaclientes');
     }
 
@@ -90,7 +90,10 @@ class clienteController extends Controller
      */
     public function destroy(string $id)
     {
+        $nombre=DB::table('cliente')->where('id', $id)->first();
         DB::table('cliente')->where('id', $id)->delete();
+
+        session()->flash('eliminado', 'Se elimino al usuario ' .$nombre->nombre);
         return to_route('rutaclientes');
     }
 }
