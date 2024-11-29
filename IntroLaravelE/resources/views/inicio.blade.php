@@ -23,8 +23,8 @@
         <p>{{__('Presione el botón para iniciar...')}}</p>
 
         
-        <a href="{{route('rutaclientes')}}" class="btn btn-danger">{{__('Ver todos los clientes')}}</a>
-        <a href="{{ route('rutacacas') }}" class="btn btn-primary">{{__('Ir al registro')}}</a>
+        <a href="{{route('cliente.index')}}" class="btn btn-danger">{{__('Ver todos los clientes')}}</a>
+        <a href="{{ route('cliente.create') }}" class="btn btn-primary">{{__('Ir al registro')}}</a>
         {{-- <a href="/formulario" class="btn btn-danger"> Consultar Clientes </a> --}}
 </body>
 </html>

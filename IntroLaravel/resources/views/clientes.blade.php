@@ -49,7 +49,7 @@
         @endforeach
     </div>
 
-    {{-- Formulario oculto para enviar la solicitud DELETE --}}
+    {{-- Formulario para enviar la solicitud DELETE --}}
     <form id="deleteForm" action="" method="POST" style="display: none;">
         @csrf
         @method('DELETE')
